@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  
   // Formulario de proceso
   var formProceso = $("form[name='form-proceso']");
   
@@ -34,7 +35,9 @@ $(document).ready(function () {
     $(".progress-bar").css("width", percent + "%");
   }
   
-  $("#submit").click(function () {
+  // Exportar a PDF
+
+  $("#exportar-pdf").click(function () {
     var data = formProceso.serializeArray();
   
     // Convertir formulario en objeto
@@ -92,5 +95,6 @@ $(document).ready(function () {
       alert("Error al consumir la API");
     },
   });
+
 });
   

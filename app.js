@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
   
   // Formulario de proceso
   var formProceso = $("form[name='form-proceso']");
@@ -11,7 +11,7 @@ $(document).ready(function () {
   
   setProgressBar(currentStep);
   
-  $(".next").click(function () {
+  $(".next").click(function() {
     currentFieldset = $(this).parent();
     nextFieldset = $(this).parent().next();
   
@@ -20,7 +20,7 @@ $(document).ready(function () {
     setProgressBar(++currentStep);
   });
   
-  $(".prev").click(function () {
+  $(".prev").click(function() {
     currentFieldset = $(this).parent();
     prevFieldset = $(this).parent().prev();
   
@@ -35,9 +35,8 @@ $(document).ready(function () {
     $(".progress-bar").css("width", percent + "%");
   }
   
-  // Exportar a PDF
-
-  $("#exportar-pdf").click(function () {
+  $("#submit").click(function(event) {
+    event.preventDefault();
     var data = formProceso.serializeArray();
   
     // Convertir formulario en objeto
@@ -57,6 +56,11 @@ $(document).ready(function () {
   });
   
   function generatePDF(json) {
+    if (typeof jsPDF === "undefined") {
+      alert("Error: jsPDF no está definido. Por favor, asegúrese de que se ha cargado la biblioteca jsPDF.");
+      return;
+    }
+    
     var pdf = new jsPDF();
   
     pdf.setFontSize(12);
@@ -79,7 +83,7 @@ $(document).ready(function () {
   $.ajax({
     url: "https://jsonplaceholder.typicode.com/posts",
     method: "GET",
-    success: function (data) {
+    success: function(data) {
       console.log(data);
       $("#resultados").html("");
       for (var i = 0; i < data.length; i++) {
@@ -91,10 +95,20 @@ $(document).ready(function () {
         $("#resultados").append(html);
       }
     },
-    error: function () {
+    error: function() {
       alert("Error al consumir la API");
-    },
+    }
   });
-
-});
   
+  // Smooth scrolling
+  $('a[href^="#"]').on('click', function(event) {
+    var target = $(this.getAttribute('href'));
+    if( target.length ) {
+      event.preventDefault();
+      $('html, body').stop().animate({
+        scrollTop: target.offset().top
+      }, 1000);
+    }
+  });
+  
+});

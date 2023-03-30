@@ -1,5 +1,20 @@
+h2 {
+  font-size: xx-large;
+}
+
+h3 {
+  font-size: larger;
+}
+
+p {
+  color: black;
+  font-size: large;
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #F5F5F5;
+  font-family: 'Roboto',Arial, Helvetica, sans-serif;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -11,11 +26,12 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  margin-bottom: 20px;
 }
   
 header h1 {
+  font-size: x-large;
   margin: 0;
-  padding-right: 10px;
 }
   
 nav ul {
@@ -55,7 +71,7 @@ form input[type="text"],
 form input[type="email"],
 form select,
 form textarea {
-  width: 90%;
+  width: 80%;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -68,13 +84,14 @@ form textarea {
   
 form button[type="submit"],
 form button[type="button"] {
+  width: 20%;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   background-color: #333;
   color: #fff;
   cursor: pointer;
-  margin-right: 10px;
+  margin: 10px 10px 10px 0px;
 }
   
 form button[type="submit"]:hover,
@@ -114,6 +131,11 @@ footer {
   nav ul li {
     margin-right: 10px;
     font-size: 0.9em;
+  }
+
+  form button[type="submit"],
+  form button[type="button"] {
+    width: auto;
   }
 
 }

@@ -1,113 +1,182 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Equipo 6 - AP 4.0</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
-</head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1>Trabajo integrador - Argentina Programa 4.0</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
+      <h1>Trabajo integrador - Argentina Programa 4.0</h1>
+      <nav>
+        <ul>
+          <li><a href="#presentacion">Inicio</a></li>
+          <li><a href="#presentacion-personal">Nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="#proceso">Proceso</a></li>
+        </ul>
+      </nav>
     </header>
 
     <section id="presentacion">
-        <h2>Presentación de la Organización</h2>
-        <p>¡Bienvenidos a nuestra página web! Somos un grupo de estudiantes apasionados por el desarrollo web y queremos compartir nuestros conocimientos y proyectos contigo. En esta página encontrarás información sobre quiénes somos, nuestros servicios y proyectos, así como también podrás contactarnos para cualquier duda o consulta. ¡Gracias por visitarnos!.</p>
+      <h2>Presentación de la Organización</h2>
+      <p>
+        ¡Bienvenidos a nuestra página web! Somos un grupo de estudiantes
+        apasionados por el desarrollo web y queremos compartir nuestros
+        conocimientos y proyectos contigo. En esta página encontrarás
+        información sobre quiénes somos, nuestros servicios y proyectos, así
+        como también podrás contactarnos para cualquier duda o consulta.
+        ¡Gracias por visitarnos!.
+      </p>
     </section>
 
     <section id="presentacion-personal">
-        <h2>Presentación Personal</h2>
-        <p>¡Hola a todos! Somos el equipo 6 en el curso de desarrollo web de Argentina Programa 4.0 y queremos presentarnos individualmente.</p>
-        <br>
-        <p>Miembros del equipo:</p>
-        <p>Breve descripción sobre cada miembro:</p>
-        <ul>
-            <li>Alex Pereyra - Soy un estudiante apasionado por el desarrollo web. Me encanta aprender nuevas tecnologías y estoy emocionado por compartir mi experiencia en este campo con todos ustedes.</li>
-            <li>Nombre Apellido - Descripción breve</li>
-            <li>Nombre Apellido - Descripción breve</li>
-            <li>Nombre Apellido - Descripción breve</li>
-            <li>Nombre Apellido - Descripción breve</li>
-        </ul>
-        <p>Juntos, estamos comprometidos a brindarte los mejores servicios de desarrollo web y a llevar tus proyectos al siguiente nivel. ¡Gracias por confiar en nosotros!</p>
+      <h2>Presentación Personal</h2>
+      <p>
+        ¡Hola a todos! Somos el equipo 6 en el curso de desarrollo web de
+        Argentina Programa 4.0 y queremos presentarnos individualmente.
+      </p>
+      <h3>Miembros del equipo:</h3>
+      <ul>
+        <li>
+          Alex Pereyra - Soy un estudiante apasionado por el desarrollo web. Me
+          encanta aprender nuevas tecnologías y estoy emocionado por compartir
+          mi experiencia en este campo con todos ustedes.
+        </li>
+        <li>Nombre Apellido - Descripción breve</li>
+        <li>Nombre Apellido - Descripción breve</li>
+        <li>Nombre Apellido - Descripción breve</li>
+        <li>Nombre Apellido - Descripción breve</li>
+      </ul>
+      <p>
+        Estamos orgullosos de presentarles nuestra creación, un formulario que
+        hemos diseñado para hacer que su experiencia de solicitud en línea sea
+        lo más fácil y fluida posible. En lugar de simplemente venderle un
+        servicio, hemos invertido tiempo y esfuerzo en crear una herramienta que
+        realmente lo ayude a obtener lo que necesita de manera efectiva.
+      </p>
+      <p>
+        Permítanos mostrarle lo que hemos creado y cómo puede ayudarlo a
+        alcanzar sus objetivos en línea:
+      </p>
     </section>
 
     <section id="contacto">
-        <h2>Contacto</h2>
-        <form id="form-contacto" method="GET" action="">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required />
+      <h2>Contacto</h2>
+      <form id="form-contacto" method="GET" action="">
+        <label for="nombre">Nombre:</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          placeholder="Nombre"
+          required
+        />
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Email" required />
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email"
+          required
+        />
 
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí" required></textarea>
+        <label for="mensaje">Mensaje:</label>
+        <textarea
+          id="mensaje"
+          name="mensaje"
+          placeholder="Escribe tu mensaje aquí"
+          required
+        ></textarea>
 
-            <button type="submit" id="enviar">Enviar</button>
-        </form>
+        <button type="submit" id="enviar">Enviar</button>
+      </form>
     </section>
 
     <section id="proceso">
-        <h2>Proceso</h2>
-        <form id="form-proceso" method="GET" action="">
-            <fieldset>
-                <legend>Paso 1</legend>
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required />
+      <h2>Proceso</h2>
+      <form id="form-proceso" method="GET" action="">
+        <fieldset>
+          <legend>Paso 1</legend>
+          <label for="nombre">Nombre:</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Nombre"
+            required
+          />
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Email" required />
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
 
-                <button type="button" class="next">Siguiente</button>
-            </fieldset>
+          <button type="button" class="next">Siguiente</button>
+        </fieldset>
 
-            <fieldset>
-                <legend>Paso 2</legend>
-                <label for="producto">Producto:</label>
-                <select id="producto" name="producto" required>
-                    <option value="">Selecciona un producto</option>
-                    <option value="producto1">Producto 1</option>
-                    <option value="producto2">Producto 2</option>
-                    <option value="producto3">Producto 3</option>
-                </select>
+        <fieldset>
+          <legend>Paso 2</legend>
+          <label for="producto">Producto:</label>
+          <select id="producto" name="producto" required>
+            <option value="">Selecciona un producto</option>
+            <option value="producto1">Producto 1</option>
+            <option value="producto2">Producto 2</option>
+            <option value="producto3">Producto 3</option>
+          </select>
 
-                <label for="cantidad">Cantidad:</label>
-                <input type="number" id="cantidad" name="cantidad" placeholder="Cantidad" required />
+          <label for="cantidad">Cantidad:</label>
+          <input
+            type="number"
+            id="cantidad"
+            name="cantidad"
+            placeholder="Cantidad"
+            required
+          />
 
-                <button type="button" class="prev">Anterior</button>
-                <button type="button" class="next">Siguiente</button>
-            </fieldset>
+          <button type="button" class="prev">Anterior</button>
+          <button type="button" class="next">Siguiente</button>
+        </fieldset>
 
-            <fieldset>
-                <legend>Paso 3</legend>
-                <label for="comentarios">Comentarios:</label>
-                <textarea id="comentarios" name="comentarios" placeholder="Agrega tus comentarios"></textarea>
+        <fieldset>
+          <legend>Paso 3</legend>
+          <label for="comentarios">Comentarios:</label>
+          <textarea
+            id="comentarios"
+            name="comentarios"
+            placeholder="Agrega tus comentarios"
+          ></textarea>
 
-                <button type="button" class="prev">Anterior</button>
-                <button type="submit" id="submit">Enviar</button>
-                <button id="exportar-pdf" type="button" class="btn btn-primary">Exportar PDF</button>
-
-            </fieldset>
-        </form>
+          <button type="button" class="prev">Anterior</button>
+          <button type="submit" id="submit">Enviar</button>
+          <button id="exportar-pdf" type="button" class="btn btn-primary">
+            Exportar PDF
+          </button>
+        </fieldset>
+      </form>
     </section>
 
     <footer>
-        <p>Derechos Reservados: Equipo 6 Argentina Programa 4.0 &copy; 2023</p>
+      <p>Derechos Reservados: Equipo 6 Argentina Programa 4.0 &copy; 2023</p>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
     <script src="app.js"></script>
-</body>
-
+  </body>
 </html>

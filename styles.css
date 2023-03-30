@@ -115,10 +115,18 @@ footer {
   padding: 20px;
 }
 
-@media (max-width: 1023px) {
-  
-  h1 {font-size: 1em;}
 
+@media (max-width: 1023px) {
+
+
+  nav ul {
+    display: grid;
+    grid-gap: 10px;
+  }
+
+  h1 {
+    font-size: 1em;
+  }
 
 }
 
@@ -126,11 +134,13 @@ footer {
   
   h1 {
     font-size: 0.9em;
+    padding: 10px;
   }
-
+  
   nav ul li {
     margin-right: 10px;
     font-size: 0.9em;
+    padding: 5px;
   }
 
   form button[type="submit"],

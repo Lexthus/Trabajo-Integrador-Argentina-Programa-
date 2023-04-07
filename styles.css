@@ -14,7 +14,7 @@ p {
 body {
   
   background-image: url(imagen.jpg.jpg);
-  font-weight: none;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }

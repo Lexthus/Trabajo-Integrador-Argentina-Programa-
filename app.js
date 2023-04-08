@@ -1,85 +1,33 @@
 $(document).ready(function() {
-  
-  // Formulario de proceso
-  var formProceso = $("form[name='form-proceso']");
-  
+  var formProceso = $("#form-proceso");
+  var totalSteps = $("fieldset").length;
   var currentStep = 1;
-  var nextStep = 2;
-  
-  var currentFieldset = $("fieldset[data-step='" + currentStep + "']");
-  var nextFieldset = $("fieldset[data-step='" + nextStep + "']");
-  
+
   setProgressBar(currentStep);
-  
+
+  // Ocultar todos los fieldsets menos el primero
+  $("fieldset").not(":first").hide();
+
   $(".next").click(function() {
-    currentFieldset = $(this).parent();
-    nextFieldset = $(this).parent().next();
-  
-    currentFieldset.hide();
-    nextFieldset.show();
+    var $activeFieldset = $(this).closest("fieldset");
+    $activeFieldset.hide();
+    $activeFieldset.next().show();
     setProgressBar(++currentStep);
   });
-  
+
   $(".prev").click(function() {
-    currentFieldset = $(this).parent();
-    prevFieldset = $(this).parent().prev();
-  
-    currentFieldset.hide();
-    prevFieldset.show();
+    var $activeFieldset = $(this).closest("fieldset");
+    $activeFieldset.hide();
+    $activeFieldset.prev().show();
     setProgressBar(--currentStep);
   });
-  
+
   function setProgressBar(currentStep) {
-    var percent = parseFloat(100 / 3) * currentStep;
+    var percent = parseFloat(100 / totalSteps) * currentStep;
     percent = percent.toFixed();
     $(".progress-bar").css("width", percent + "%");
   }
-  
-  $("#submit").click(function(event) {
-    event.preventDefault();
-    var data = formProceso.serializeArray();
-  
-    // Convertir formulario en objeto
-    var obj = {};
-    for (var i = 0; i < data.length; i++) {
-      obj[data[i].name] = data[i].value;
-    }
-  
-    // Convertir objeto a JSON
-    var json = JSON.stringify(obj);
-  
-    // Mostrar objeto en consola
-    console.log(json);
-  
-    // Generar PDF
-    generatePDF(json);
-  });
-  
-  function generatePDF(json) {
-    if (typeof jsPDF === "undefined") {
-      alert("Error: jsPDF no está definido. Por favor, asegúrese de que se ha cargado la biblioteca jsPDF.");
-      return;
-    }
-    
-    var pdf = new jsPDF();
-  
-    pdf.setFontSize(12);
-    pdf.text("Resumen del Proceso", 10, 10);
-  
-    var data = JSON.parse(json);
-  
-    var y = 30;
-    for (var key in data) {
-      if (data.hasOwnProperty(key)) {
-        pdf.text(key + ": " + data[key], 10, y);
-        y += 10;
-      }
-    }
-  
-    pdf.save("resumen.pdf");
-  }
-  
-  // Consumir API Externa
+
   $.ajax({
     url: "https://jsonplaceholder.typicode.com/posts",
     method: "GET",
@@ -99,8 +47,7 @@ $(document).ready(function() {
       alert("Error al consumir la API");
     }
   });
-  
-  // Smooth scrolling
+
   $('a[href^="#"]').on('click', function(event) {
     var target = $(this.getAttribute('href'));
     if( target.length ) {
@@ -110,5 +57,4 @@ $(document).ready(function() {
       }, 1000);
     }
   });
-  
 });

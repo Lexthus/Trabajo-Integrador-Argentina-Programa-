@@ -1,24 +1,31 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Estilos para encabezados */
 h2 {
-  font-size: xx-large;
+  font-size: 2em;
 }
 
 h3 {
-  font-size: larger;
+  font-size: 1.5em;
 }
 
+/* Estilos para párrafos */
 p {
   color: black;
-  font-size: large;
+  font-size: 1.2em;
 }
 
+/* Estilos para el cuerpo del documento */
 body {
-  
   background-image: url(imagen.jpg);
   font-weight: bold;
   margin: 0;
   padding: 0;
 }
-  
+
+/* Estilos para encabezado */
 header {
   background-color: #333;
   color: #fff;
@@ -28,45 +35,48 @@ header {
   padding: 20px;
   margin-bottom: 20px;
 }
-  
+
 header h1 {
-  font-size: x-large;
+  font-size: 2em;
   margin: 0;
 }
-  
+
+/* Estilos para la barra de navegación */
 nav ul {
   list-style: none;
   margin: 0;
   padding-left: 10px;
   display: flex;
 }
-  
+
 nav ul li {
   margin-right: 20px;
 }
-  
+
 nav ul li:last-child {
   margin-right: 0;
 }
-  
+
 nav ul li a {
   color: #fff;
   text-decoration: none;
 }
-  
+
+/* Estilos para secciones */
 section {
   padding: 20px;
 }
-  
+
 section h2 {
   margin-top: 0;
 }
-  
+
+/* Estilos para formulario */
 form label {
   display: block;
   margin-bottom: 10px;
 }
-  
+
 form input[type="text"],
 form input[type="email"],
 form select,
@@ -77,11 +87,11 @@ form textarea {
   border: 1px solid #ccc;
   margin-bottom: 20px;
 }
-  
+
 form textarea {
   resize: vertical;
 }
-  
+
 form button[type="submit"],
 form button[type="button"] {
   width: 20%;
@@ -93,21 +103,27 @@ form button[type="button"] {
   cursor: pointer;
   margin: 10px 10px 10px 0px;
 }
-  
+
 form button[type="submit"]:hover,
 form button[type="button"]:hover {
   background-color: #444;
 }
-  
+
 form button[type="submit"]:focus,
 form button[type="button"]:focus {
   outline: none;
 }
-  
+
 form button.prev {
   display: none;
 }
-  
+
+fieldset {
+  transition: opacity 0.5s ease-out;
+}
+
+
+/* Estilos para pie de página */
 footer {
   background-color: #333;
   color: #fff;
@@ -115,31 +131,31 @@ footer {
   padding: 20px;
 }
 
+.texto-footer {
+  color: #fff;
+}
 
+/* Estilos para pantallas pequeñas */
 @media (max-width: 1023px) {
-
-
   nav ul {
     display: grid;
     grid-gap: 10px;
   }
 
   h1 {
-    font-size: 1em;
+    font-size: 1.2em;
   }
-
 }
 
 @media (max-width: 767px) {
-  
   h1 {
-    font-size: 0.9em;
+    font-size: 1em;
     padding: 10px;
   }
-  
+
   nav ul li {
     margin-right: 10px;
-    font-size: 0.9em;
+    font-size: 1em;
     padding: 5px;
   }
 
@@ -147,5 +163,8 @@ footer {
   form button[type="button"] {
     width: auto;
   }
-
+  
+  fieldset:not(:first-of-type) {
+    display: none;
+  }
 }

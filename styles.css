@@ -7,9 +7,10 @@
   font-family: 'Roboto', sans-serif;
 }
 
-/* Estilos para encabezados */
+/* Estilos para titulos*/
 h2 {
   font-size: 2em;
+  text-align: center;
 }
 
 h3 {
@@ -20,6 +21,7 @@ h3 {
 p {
   color: black;
   font-size: 1.2em;
+  text-align: center;
 }
 
 /* Estilos para el cuerpo del documento */
@@ -47,10 +49,10 @@ header h1 {
 }
 
 /* Estilos para la barra de navegación */
+
 nav ul {
   list-style: none;
   margin: 0;
-  padding-left: 10px;
   display: flex;
 }
 
@@ -68,6 +70,7 @@ nav ul li a {
 }
 
 /* Estilos para secciones */
+
 section {
   padding: 20px;
 }
@@ -76,7 +79,27 @@ section h2 {
   margin-top: 0;
 }
 
+/* Estilos para presentacion */
+
+.presentacion-personal__nombres {
+  margin: 0;
+  display: flex;
+  list-style: none;
+  text-align: center;
+}
+
+.texto-presentacion{
+  padding: 20px;
+}
+
+
 /* Estilos para formulario */
+
+#form-contacto {
+  display: grid;
+  justify-items: center;
+}
+
 form label {
   display: block;
   margin-bottom: 10px;
@@ -129,6 +152,7 @@ fieldset {
 
 
 /* Estilos para pie de página */
+
 footer {
   background-color: var(--eastern-blue-oscuro);
   color: #fff;
@@ -141,6 +165,7 @@ footer {
 }
 
 /* Estilos para pantallas pequeñas */
+
 @media (max-width: 1023px) {
   nav ul {
     display: grid;

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Equipo 6 - AP 4.0</title>
+    <link rel="shortcut icon" href="ar-prog_logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,7 +15,6 @@
   </head>
   <body>
     <header>
-      <img src="imagen.jpg" alt="Logo" />
       <h1>Trabajo integrador - Argentina Programa 4.0</h1>
       <nav>
         <ul>
@@ -26,49 +26,59 @@
       </nav>
     </header>
 
-<section id="presentacion">
-  <h2>Presentación de la Organización</h2>
-  <p>
-    ¡Bienvenidos a nuestra página web! Somos un grupo de estudiantes
-    apasionados por el desarrollo web y queremos compartir nuestros
-    conocimientos y proyectos contigo. En esta página encontrarás
-    información sobre quiénes somos, nuestros servicios y proyectos, así
-    como también podrás contactarnos para cualquier duda o consulta.
-    ¡Gracias por visitarnos!.
-  </p>
-</section>
-
-<section id="presentacion-personal">
-  <h2>Presentación Personal</h2>
-  <p>
-    ¡Hola a todos! Somos el equipo 6 en el curso de desarrollo web de
-    Argentina Programa 4.0 y queremos presentarnos individualmente.
-  </p>
-  <h3>Miembros del equipo:</h3>
-  <ul>
-    <li>
-      Alex Pereyra - Soy un estudiante apasionado por el desarrollo web. Me
-      encanta aprender nuevas tecnologías y estoy emocionado por compartir
-      mi experiencia en este campo.
-    </li>
-    <li>Gimena Canadell - Estudiando desarrollo web,dando mis primeros pasitos en este camino!</li>
-    <li>Leonardo Martin - Aprendiendo en este mundo de la programacion</li>
-    <li>Javier Soriano - Descripción breve</li>
-    <li>Nombre Apellido - Descripción breve</li>
-  </ul>
-  <p>
-    Estamos orgullosos de presentarles nuestra creación, un formulario que
-    hemos diseñado para hacer que su experiencia de solicitud en línea sea
-    lo más fácil y fluida posible. En lugar de simplemente venderle un
-    servicio, hemos invertido tiempo y esfuerzo en crear una herramienta que
-    realmente lo ayude a obtener lo que necesita de manera efectiva.
-  </p>
-  <p>
-    Permítanos mostrarle lo que hemos creado y cómo puede ayudarlo a
-        alcanzar sus objetivos en línea:
+    <section id="presentacion">
+      <h2>Presentación de la Organización</h2>
+      <p>
+        ¡Bienvenidos a nuestra página web! Somos un grupo de estudiantes
+        apasionados por el desarrollo web y queremos compartir nuestros
+        conocimientos y proyectos contigo. En esta página encontrarás
+        información sobre quiénes somos, nuestros servicios y proyectos, así
+        como también podrás contactarnos para cualquier duda o consulta.
+        ¡Gracias por visitarnos!.
       </p>
     </section>
 
+    <section id="presentacion-personal">
+      <h2>Presentación Personal</h2>
+      <p>
+        ¡Hola a todos! Somos el equipo 6 en el curso de desarrollo web de
+        Argentina Programa 4.0 y queremos presentarnos individualmente.
+      </p>
+      <h3>Miembros del equipo:</h3>
+      <ul>
+        <li>
+          Alex Pereyra - Soy un estudiante apasionado por el desarrollo web. Me
+          encanta aprender nuevas tecnologías y estoy emocionado por compartir
+          mi experiencia en este campo.
+        </li>
+        <li>
+          Gimena Canadell - Estoy estudiando desarrollo web y dando mis primeros
+          pasos en este camino, pero estoy entusiasmada por aprender y crecer en
+          esta área.
+        </li>
+        <li>
+          Leonardo Martin - Soy un programador autodidacta y siempre estoy
+          buscando nuevos desafíos y oportunidades para aprender y mejorar mis
+          habilidades.
+        </li>
+        <li>
+          Javier Soriano - Me apasiona el diseño web y estoy emocionado por
+          compartir mis habilidades y conocimientos con los demás miembros del
+          equipo.
+        </li>
+      </ul>
+      <p>
+        Estamos orgullosos de presentarles nuestra creación, un formulario que
+        hemos diseñado para hacer que su experiencia de solicitud en línea sea
+        lo más fácil y fluida posible. En lugar de simplemente venderle un
+        servicio, hemos invertido tiempo y esfuerzo en crear una herramienta que
+        realmente lo ayude a obtener lo que necesita de manera efectiva.
+      </p>
+      <p>
+        Permítanos mostrarle lo que hemos creado y cómo puede ayudarlo a
+        alcanzar sus objetivos en línea:
+      </p>
+    </section>
     <section id="contacto">
       <h2>Contacto</h2>
       <form id="form-contacto" method="GET" action="">
@@ -101,23 +111,36 @@
         <button type="submit" id="enviar">Enviar</button>
       </form>
     </section>
-
     <section id="proceso">
       <h2>Proceso</h2>
       <form id="form-proceso" method="GET" action="">
         <fieldset class="hidden">
-          <legend>Paso 1</legend>
+          <legend>Paso 1: Información Personal</legend>
           <label for="nombre">Nombre:</label>
-          <input type="text" id="nombre" name="nombre" placeholder="Nombre" required />
-    
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Nombre"
+            required
+          />
+
           <label for="email">Email:</label>
-          <input type="email" id="email" name="email" placeholder="Email" required />
-    
-          <button type="button" class="next" id="btn-siguiente">Siguiente</button>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+
+          <button type="button" class="next" id="btn-siguiente">
+            Siguiente
+          </button>
         </fieldset>
-    
+
         <fieldset class="hidden">
-          <legend>Paso 2</legend>
+          <legend>Paso 2: Datos de envío</legend>
           <label for="producto">Producto:</label>
           <select id="producto" name="producto" required>
             <option value="">Selecciona un producto</option>
@@ -125,36 +148,47 @@
             <option value="producto2">Producto 2</option>
             <option value="producto3">Producto 3</option>
           </select>
-    
+
           <label for="cantidad">Cantidad:</label>
-          <input type="number" id="cantidad" name="cantidad" placeholder="Cantidad" required />
-    
+          <input
+            type="number"
+            id="cantidad"
+            name="cantidad"
+            placeholder="Cantidad"
+            required
+          />
+
           <button type="button" class="prev">Anterior</button>
           <button type="button" class="next">Siguiente</button>
         </fieldset>
-    
+
         <fieldset class="hidden">
           <legend>Paso 3</legend>
           <label for="comentarios">Comentarios:</label>
-          <textarea id="comentarios" name="comentarios" placeholder="Agrega tus comentarios"></textarea>
-    
+          <textarea
+            id="comentarios"
+            name="comentarios"
+            placeholder="Agrega tus comentarios"
+          ></textarea>
+
           <button type="button" class="prev">Anterior</button>
           <button type="submit" id="submit">Enviar</button>
         </fieldset>
-    
+
         <fieldset class="hidden">
           <h2>Resumen</h2>
           <p>Por favor, revisa que toda la información sea correcta:</p>
-          <div id="resumen-formulario"></div>
+          <div id="pedido-resumen"></div>
           <button type="button" class="prev">Anterior</button>
           <button type="button" id="btn-finalizar">Finalizar</button>
         </fieldset>
       </form>
     </section>
-    
 
     <footer>
-      <p class="texto-footer">Derechos Reservados: Equipo 6 - Argentina Programa 4.0 &copy; 2023</p>
+      <p class="texto-footer">
+        Derechos Reservados: Equipo 6 - Argentina Programa 4.0 &copy; 2023
+      </p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

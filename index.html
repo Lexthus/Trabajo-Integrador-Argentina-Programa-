@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,57 +18,66 @@
     <header>
       <h1>Trabajo integrador - Argentina Programa 4.0</h1>
       <nav>
-        <ul>
+        <div class="lista-nav">
           <li><a href="#presentacion">Inicio</a></li>
           <li><a href="#presentacion-personal">Nosotros</a></li>
           <li><a href="#contacto">Contacto</a></li>
           <li><a href="#proceso">Proceso</a></li>
-        </ul>
+        </div>
       </nav>
     </header>
 
     <section id="presentacion">
-      <h2>¡Bienvenidos a nuestra página web!</h2>
-      <p>
-        Somos un grupo de estudiantes
-        apasionados por el desarrollo web y queremos compartir nuestros
-        conocimientos y proyectos contigo. En esta página encontrarás
-        información sobre quiénes somos, nuestros servicios y proyectos, así
-        como también podrás contactarnos para cualquier duda o consulta.
-        ¡Gracias por visitarnos!.
+      <h2 class="presentacion__titulo">¡Bienvenidos a nuestra página web!</h2>
+      <p class="presentacion__texto-1">
+        Somos un grupo de estudiantes apasionados por el desarrollo web y
+        queremos compartir nuestros conocimientos y proyectos contigo.
+      </p>
+      <p class="presentacion__texto-2">
+        En esta página encontrarás información sobre quiénes somos, nuestros
+        servicios y proyectos, así como también podrás contactarnos para
+        cualquier duda o consulta.
       </p>
     </section>
 
     <section id="presentacion-personal">
       <h2>Presentación Personal</h2>
       <p>
-        Somos el equipo 6 en el curso de desarrollo web de
-        Argentina Programa 4.0 y queremos presentarnos individualmente.
+        Somos el equipo 6 en el curso de desarrollo web de Argentina Programa
+        4.0 y queremos presentarnos individualmente.
       </p>
-      <br>
-      <ul class="presentacion-personal__nombres">
-        <li class="texto-presentacion">
-          <p>Alex Pereyra</p>  Soy un estudiante apasionado por el desarrollo web. Me
-          encanta aprender nuevas tecnologías y estoy emocionado por compartir
-          mi experiencia en este campo.
+      <div class="presentacion-personal-nombres">
+        <li class="tarjeta">
+          <h3>Alex Pereyra</h3>
+          <p class="texto-presentacion">
+            Soy un estudiante apasionado por el desarrollo web. Me encanta
+            aprender nuevas tecnologías y estoy emocionado por compartir mi
+            experiencia en este campo.
+          </p>
         </li>
-        <li class="texto-presentacion">
-          <p>Gimena Canadell</p> Estoy estudiando desarrollo web y dando mis primeros
-          pasos en este camino, pero estoy entusiasmada por aprender y crecer en
-          esta área.
+        <li class="tarjeta">
+          <h3>Gimena Canadell</h3>
+          <p class="texto-presentacion">
+            Estoy estudiando desarrollo web y dando mis primeros pasos en este
+            camino, pero estoy entusiasmada por aprender y crecer en esta área.
+          </p>
         </li>
-        <li class="texto-presentacion">
-          <p>Leonardo Martin</p> Soy un programador autodidacta y siempre estoy
-          buscando nuevos desafíos y oportunidades para aprender y mejorar mis
-          habilidades.
+        <li class="tarjeta">
+          <h3>Leonardo Martin</h3>
+          <p class="texto-presentacion">
+            Soy un programador autodidacta y siempre estoy buscando nuevos
+            desafíos y oportunidades para aprender y mejorar mis habilidades.
+          </p>
         </li>
-        <li class="texto-presentacion">
-          <p>Javier Soriano</p> Me apasiona el diseño web y estoy emocionado por
-          compartir mis habilidades y conocimientos con los demás miembros del
-          equipo.
+        <li class="tarjeta">
+          <h3>Javier Soriano</h3>
+          <p class="texto-presentacion">
+            Me apasiona el diseño web y estoy emocionado por compartir mis
+            habilidades y conocimientos con los demás miembros del equipo.
+          </p>
         </li>
-      </ul>
-      <br>
+      </div>
+      <br />
       <p>
         Estamos orgullosos de presentarles nuestra creación, un formulario que
         hemos diseñado para hacer que su experiencia de solicitud en línea sea
@@ -77,7 +85,7 @@
         servicio, hemos invertido tiempo y esfuerzo en crear una herramienta que
         realmente lo ayude a obtener lo que necesita de manera efectiva.
       </p>
-      <br>
+      <br />
       <p>
         Permítanos mostrarle lo que hemos creado y cómo puede ayudarlo a
         alcanzar sus objetivos en línea:
@@ -107,6 +115,7 @@
 
         <label for="mensaje">Mensaje:</label>
         <textarea
+          class="mensaje"
           id="mensaje"
           name="mensaje"
           placeholder="Escribe tu mensaje aquí"

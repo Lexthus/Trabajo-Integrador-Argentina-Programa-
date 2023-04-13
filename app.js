@@ -1,114 +1,100 @@
-$(document).ready(function() {
-  
-  // Formulario de proceso
-  var formProceso = $("form[name='form-proceso']");
-  
+$(documento). Ready(función () {
+  var formProceso = $("#form-proceso");
+  var totalSteps = $("fieldset"). largura;
   var currentStep = 1;
-  var nextStep = 2;
-  
-  var currentFieldset = $("fieldset[data-step='" + currentStep + "']");
-  var nextFieldset = $("fieldset[data-step='" + nextStep + "']");
-  
+
   setProgressBar(currentStep);
-  
-  $(".next").click(function() {
-    currentFieldset = $(this).parent();
-    nextFieldset = $(this).parent().next();
-  
-    currentFieldset.hide();
-    nextFieldset.show();
+
+  Ocultar todos los fieldsets menos el primero
+  $("fieldset"). not(":first"). esconder();
+
+  $(".next"). click(función () {
+    var $activeFieldset = $(this). closest("fieldset");
+    $activeFieldset. esconder();
+    $activeFieldset. siguiente(). mostrar();
     setProgressBar(++currentStep);
   });
-  
-  $(".prev").click(function() {
-    currentFieldset = $(this).parent();
-    prevFieldset = $(this).parent().prev();
-  
-    currentFieldset.hide();
-    prevFieldset.show();
+
+  $(".prev"). click(función () {
+    var $activeFieldset = $(this). closest("fieldset");
+    $activeFieldset. esconder();
+    $activeFieldset. anterior(). mostrar();
     setProgressBar(--currentStep);
   });
-  
+
   function setProgressBar(currentStep) {
-    var percent = parseFloat(100 / 3) * currentStep;
-    percent = percent.toFixed();
-    $(".progress-bar").css("width", percent + "%");
+    var percent = parseFloat(100 / totalSteps) * currentStep;
+     porcentaje = porcentaje. toFijo();
+    $(".progress-bar"). css("width", porcentaje + "%");
   }
-  
-  $("#submit").click(function(event) {
-    event.preventDefault();
-    var data = formProceso.serializeArray();
-  
-    // Convertir formulario en objeto
-    var obj = {};
-    for (var i = 0; i < data.length; i++) {
-      obj[data[i].name] = data[i].value;
-    }
-  
-    // Convertir objeto a JSON
-    var json = JSON.stringify(obj);
-  
-    // Mostrar objeto en consola
-    console.log(json);
-  
-    // Generar PDF
-    generatePDF(json);
-  });
-  
-  function generatePDF(json) {
-    if (typeof jsPDF === "undefined") {
-      alert("Error: jsPDF no está definido. Por favor, asegúrese de que se ha cargado la biblioteca jsPDF.");
-      return;
-    }
-    
-    var pdf = new jsPDF();
-  
-    pdf.setFontSize(12);
-    pdf.text("Resumen del Proceso", 10, 10);
-  
-    var data = JSON.parse(json);
-  
-    var y = 30;
-    for (var key in data) {
-      if (data.hasOwnProperty(key)) {
-        pdf.text(key + ": " + data[key], 10, y);
-        y += 10;
+
+  $("#form-proceso"). submit(function (evento) {
+    evento. preventDefault();
+
+    Obtener los datos del formulario
+    var nombre = $("input[name='nombre']").  Val();
+    var correo = $("input[name='correo']").  Val();
+    var direccion = $("input[name='direccion']").  Val();
+    var producto = $("input[name='producto']:checked").  Val();
+    var cantidad = $("input[name=''cantidad]:checked" )
+      . map(función () {
+        return $(this). Val();
+      })
+      . Obtener();
+    var instructions = $("textarea[name='instructions']").  Val();
+
+    Mostrar resumen del pedido
+    $("#pedido-resumen"). html("<h2>Resumen de tu pedido</h2>");
+    $("#pedido-resumen"). append("<p><strong>Nombre:</strong> " + nombre + "</p>");
+    $("#pedido-resumen"). append("<p><strong>Correo:</strong> " + correo + "</p>");
+    $("#pedido-resumen"). append("<p><strong>Dirección:</strong> " + direccion + "</p>");
+    $("#pedido-resumen"). append("<p><strong>Producto:</strong> " + producto + "</p>");
+    $("#pedido-resumen"). append("<p><strong>Cantidad:</strong> " + cantidad  + "</p>" );
+
+    Enviar formulario
+    $. Ajax({
+      url: "https://jsonplaceholder.typicode.com/posts",
+      método: "POST",
+      Datos: $(esto). serializar(),
+      Éxito: función (datos) {
+        consola. log(datos);
+        alert("Pedido enviado con éxito!");
+        $("#pedido-resumen"). mostrar();  // Mostrar el resumen del pedido después de la alerta
+      },
+      Error: función () {
+        alert("Error al enviar el pedido");
       }
-    }
-  
-    pdf.save("resumen.pdf");
-  }
-  
-  // Consumir API Externa
-  $.ajax({
+    });
+  });
+
+  $. Ajax({
     url: "https://jsonplaceholder.typicode.com/posts",
-    method: "GET",
-    success: function(data) {
-      console.log(data);
-      $("#resultados").html("");
-      for (var i = 0; i < data.length; i++) {
-        var post = data[i];
+    método: "GET",
+    Éxito: función (datos) {
+      consola. log(datos);
+      $("#resultados"). .html("");
+      para (var i = 0;  <  datos. longitud;  Yo++) {
+        var post = datos[i];
         var html = "<div>";
-        html += "<h3>" + post.title + "</h3>";
-        html += "<p>" + post.body + "</p>";
+        html += "<h3>" + post. Título + "</h3>";
+        html += "<p>" + post. cuerpo + "</p>";
         html += "</div>";
-        $("#resultados").append(html);
+        $("#resultados"). anexar(html);
       }
     },
-    error: function() {
+    Error: función () {
       alert("Error al consumir la API");
     }
   });
-  
-  // Smooth scrolling
-  $('a[href^="#"]').on('click', function(event) {
-    var target = $(this.getAttribute('href'));
-    if( target.length ) {
-      event.preventDefault();
-      $('html, body').stop().animate({
-        scrollTop: target.offset().top
+
+  $('a[href^="#"]'). on('click', function (event) {
+    var target = $(esto. getAttribute('href'));
+    Si (objetivo. largura) {
+      evento. preventDefault();
+      $('html, body'). stop(). animar({
+        scrollTop: destino. offset(). Arriba
       }, 1000);
     }
   });
   
-});
+ 

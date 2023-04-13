@@ -4,17 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Equipo 6 - AP 4.0</title>
-    <link rel="icono" href="IMG/HTML5.jpg">
-     <link rel="stylesheet" type="text/css"herf=
-    "/css/estilos.css" />
+    <<link rel="icono de acceso directo" href="ar-prog_logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+        rel="hoja de estilo"
+     /
+   <link rel="stylesheet" href="styles.css" />
+   
   </head>
 
   <body>
@@ -33,15 +31,11 @@
 
     <section id="presentacion">
       <h2>Presentación de la Organización</h2>
-      <p>
-        ¡Bienvenidos a nuestra página web! Somos un grupo de estudiantes
-        apasionados por el desarrollo web y queremos compartir nuestros
-        conocimientos y proyectos contigo. En esta página encontrarás
-        información sobre quiénes somos, nuestros servicios y proyectos, así
-        como también podrás contactarnos para cualquier duda o consulta.
-        ¡Gracias por visitarnos!.
+      <p class="presentacion__texto-1"></p>
+        Somos un grupo de estudiantes apasionados por el desarrollo web y queremos compartir nuestros
+        conocimientos y proyectos contigo. 
       </p>
-      </p>
+  
     <img src="/IMG/" alt="tecnologia de punta"
     width="50px" meight="50px" title="titulo">
     <video id="vi deo" src="media/video.mp4"controls preload="auto" width="16px meight="16px
@@ -51,21 +45,48 @@
     <section id="presentacion-personal">
       <h2>Presentación Personal</h2>
       <p>
-        ¡Hola a todos! Somos el equipo 6 en el curso de desarrollo web de
+         Somos el equipo 6 en el curso de desarrollo web de
         Argentina Programa 4.0 y queremos presentarnos individualmente.
+       </p>
+       <div class="presentacion-personal-nombres">
+        <li class="tarjeta">
+      <h3>>Alex Pereyra</h3>
+      <p class="texto-presentacion">
+        Soy un estudiante apasionado por el desarrollo web. Me encanta
+        aprender nuevas tecnologías y estoy emocionado por compartir mi
+        experiencia en este campo.
       </p>
-      <h3>Miembros del equipo:</h3>
-      <ul>
-        <li>
-          Alex Pereyra - Soy un estudiante apasionado por el desarrollo web. Me
-          encanta aprender nuevas tecnologías y estoy emocionado por compartir
-          mi experiencia en este campo.
-        </li>
-        <li>Gimena Canadell - Estudiando desarrollo web,dando mis primeros pasitos en este camino!</li>
-        <li>Leonardo Martin - Aprendiendo en este maravilloso mundo de la programacion</li>
-        <li>Raul Javier Soriano - Soy un estudiante que esta dando sus primeros paso en esta area
-         y soy comprometido con los que me gusta</li>
-      </ul>
+    </Li>
+    <li class="tarjeta">
+      <h3>Gimena Canadell</h3>
+      <p class="texto-presentacion">
+        Estoy estudiando desarrollo web y dando mis primeros pasos en este
+        camino, pero estoy entusiasmada por aprender y crecer en esta área.
+      </p>
+    </Li>
+    <li class="tarjeta">
+          <h3>Gimena Canadell</h3>
+      <p class="texto-presentacion">
+        Estoy estudiando desarrollo web y dando mis primeros pasos en este
+        camino, pero estoy entusiasmada por aprender y crecer en esta área.
+      </p>
+    </Li>
+    <li class="tarjeta">
+      <h3>Leonardo Martin</h3>
+      <p class="texto-presentacion">
+        Soy un programador autodidacta y siempre estoy buscando nuevos
+        desafíos y oportunidades para aprender y mejorar mis habilidades.
+      </p>
+    </Li>
+    <li class="tarjeta">
+      <h3>Javier Soriano</h3>
+      <p class="texto-presentacion">
+        Me apasiona el diseño web y estoy emocionado por compartir mis
+        habilidades y conocimientos con los demás miembros del equipo.
+      </p>
+    </li>
+    </div>
+    <br/>
       <p>
         Estamos orgullosos de presentarles nuestra creación, un formulario que
         hemos diseñado para hacer que su experiencia de solicitud en línea sea
@@ -73,119 +94,130 @@
         servicio, hemos invertido tiempo y esfuerzo en crear una herramienta que
         realmente lo ayude a obtener lo que necesita de manera efectiva.
       </p>
+      <br/>
       <p>
         Permítanos mostrarle lo que hemos creado y cómo puede ayudarlo a
         alcanzar sus objetivos en línea:
       </p>
-    </section>
+    </sección>
 
-    <section id="contacto">
+    <sección id="contacto">
       <h2>Contacto</h2>
-      <form id="form-contacto" method="GET" action="">
-        <label for="nombre">Nombre:</label>
-        <input
-          type="text"
+      <form id="form-contacto" method=acción "GET"="">
+        <label for="nombre">Nombre:</label >
+        <entrada
+          type="texto"
           id="nombre"
           name="nombre"
           placeholder="Nombre"
-          required
+          Obligatorio
         />
 
-        <label for="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Email"
-          required
+        <label for="email">Email:</label >
+        <entrada
+          type="correo electrónico"
+          id="correo electrónico"
+          name="correo electrónico"
+          placeholder="Correo electrónico"
+          Obligatorio
         />
 
-        <label for="mensaje">Mensaje:</label>
-        <textarea
+        <label for="mensaje">Mensaje:</label >
+        <Área de texto
+          class="mensaje"
           id="mensaje"
           name="mensaje"
           placeholder="Escribe tu mensaje aquí"
-          required
-        ></textarea>
+          Obligatorio
+        ></Área de texto>
 
-        <button type="submit" id="enviar">Enviar</button>
-      </form>
-    </section>
+        <button type="submit" id="enviar">Enviar</button >
+      </forma>
+    </sección>
 
-    <section id="proceso">
+    <sección id="proceso">
       <h2>Proceso</h2>
-      <form id="form-proceso" method="GET" action="">
-        <fieldset>
-          <legend>Paso 1</legend>
-          <label for="nombre">Nombre:</label>
-          <input
-            type="text"
+      <form id="form-proceso" method=acción "GET"="">
+        <fieldset class="oculto">
+          <legend>Paso 1: Información Personal</legend>
+          <label for="nombre">Nombre:</label >
+          <entrada
+            type="texto"
             id="nombre"
             name="nombre"
             placeholder="Nombre"
-            required
+            Obligatorio
           />
 
-          <label for="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Email"
-            required
+          <label for="email">Email:</label >
+          <entrada
+            type="correo electrónico"
+            id="correo electrónico"
+            name="correo electrónico"
+            placeholder="Correo electrónico"
+            Obligatorio
           />
 
-          <button type="button" class="next">Siguiente</button>
-        </fieldset>
+          <button type="button" class="next" id="btn-siguiente ">
+            Siguiente
+          </botón>
+        </conjunto de campos>
 
-        <fieldset>
-          <legend>Paso 2</legend>
-          <label for="producto">Producto:</label>
+        <fieldset class="oculto">
+          <legend>Paso 2: Datos de envío</legend>
+          <label for="producto">Producto:</label >
           <select id="producto" name="producto" required>
-            <option value="">Selecciona un producto</option>
-            <option value="producto1">Producto 1</option>
-            <option value="producto2">Producto 2</option>
-            <option value="producto3">Producto 3</option>
-          </select>
+            <option value="">Selecciona un producto</option >
+            <option value="producto1">Producto 1</option >
+            <option value="producto2">Producto 2</option >
+            <option value="producto3">Producto 3</option >
+          </escoger>
 
-          <label for="cantidad">Cantidad:</label>
-          <input
-            type="number"
+          <label for="cantidad">Cantidad:</label >
+          <entrada
+            type="número"
             id="cantidad"
             name="cantidad"
             placeholder="Cantidad"
-            required
+            Obligatorio
           />
 
           <button type="button" class="prev">Anterior</button>
           <button type="button" class="next">Siguiente</button>
-        </fieldset>
+        </conjunto de campos>
 
-        <fieldset>
-          <legend>Paso 3</legend>
-          <label for="comentarios">Comentarios:</label>
-          <textarea
+        <fieldset class="oculto">
+          <leyenda>Paso 3</leyenda>
+          <label for="comentarios">Comentarios:</label >
+          <Área de texto
             id="comentarios"
             name="comentarios"
             placeholder="Agrega tus comentarios"
-          ></textarea>
+          ></Área de texto>
 
           <button type="button" class="prev">Anterior</button>
-          <button type="submit" id="submit">Enviar</button>
-          <button id="exportar-pdf" type="button" class="btn btn-primary">
-            Exportar PDF
-          </button>
-        </fieldset>
-      </form>
-    </section>
+          <button type="submit" id="submit">Enviar</button >
+        </conjunto de campos>
 
-    <footer>
-      <p>Derechos Reservados: Equipo 6 Argentina Programa 4.0 &copy; 2023</p>
-    </footer>
+        <fieldset class="oculto">
+          <h2>Resumen</h2>
+          <p>Por favor, revisa que toda la información sea correcta:</p>
+          <div id="pedido-resumen"></div>
+          <button type="button" class="prev">Anterior</button>
+          <button type="button" id="btn-finalizar">Finalizar</button>
+        </conjunto de campos>
+      </forma>
+    </sección>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
-    <script src="app.js"></script>
-  </body>
-</html>
+    <pie de página>
+      <p class="texto-footer">
+        Derechos Reservados: Equipo 6 - Argentina Programa 4.0 &copy; 2023
+      </p>
+    </pie de página>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script >
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script >
+    <script src="app.js"></script >
+  </cuerpo>
+</.html>
+

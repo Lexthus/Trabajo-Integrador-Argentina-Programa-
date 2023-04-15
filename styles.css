@@ -222,6 +222,10 @@ form button.prev {
   display: none;
 }
 
+.prev-btn {
+  display: none;
+}
+
 fieldset {
   transition: opacity 0.5s ease-out;
   width: 70%;

@@ -8,8 +8,8 @@ $(document).ready(function () {
   // Ocultar todos los fieldsets menos el primero
   $("fieldset").not(":first").hide();
 
-  // Botones de retroceso en los pasos 2 y 3
-  $(".next").click(function () {
+  // Botones de retroceso y siguiente en los pasos 2 y 3
+  $(".next-btn").click(function () {
     var $activeFieldset = $(this).closest("fieldset");
     $activeFieldset.hide();
     $activeFieldset.next().show();
@@ -22,7 +22,7 @@ $(document).ready(function () {
     }
   });
 
-  $(".prev").click(function () {
+  $(".prev-btn").click(function () {
     var $activeFieldset = $(this).closest("fieldset");
     $activeFieldset.hide();
     $activeFieldset.prev().show();
@@ -42,54 +42,30 @@ $(document).ready(function () {
     var percent = parseFloat(100 / totalSteps) * currentStep;
     percent = percent.toFixed();
     $(".progress-bar").css("width", percent + "%");
+    if (currentStep == 3) {
+      $("#step-3").addClass("hidden");
+    }
+  } 
+
+  // Función para mostrar el resumen
+  function mostrarResumen() {
+    var resumen = "";
+    resumen += "<p>Nombre: " + $("#nombre").val() + "</p>";
+    resumen += "<p>Email: " + $("#email").val() + "</p>";
+    resumen += "<p>Teléfono: " + $("#telefono").val() + "</p>";
+    resumen += "<p>Comentarios: " + $("#comentarios").val() + "</p>";
+    $("#pedido-resumen").html(resumen);
+    $("#resumen").show();
+    
+    // Ocultar el botón de "Siguiente" en el último paso
+    $("#next-btn").hide();
   }
 
   $("#form-proceso").submit(function (event) {
     event.preventDefault();
 
-    // Obtener los datos del formulario
-
-    var nombre = $("input[name='nombre']").val();
-    var correo = $("input[name='correo']").val();
-    var direccion = $("input[name='direccion']").val();
-    var producto = $("input[name='producto']:checked").val();
-    var cantidad = $("input[name='cantidad']:checked")
-      .map(function () {
-        return $(this).val();
-      })
-      .get();
-    var instructions = $("textarea[name='instructions']").val();
-
-    // Mostrar resumen del pedido
-
-    $("#pedido-resumen").html("<h2>Resumen de tu pedido</h2>");
-    $("#pedido-resumen").append("<p><strong>Nombre:</strong> " + nombre + "</p>");
-    $("#pedido-resumen").append("<p><strong>Correo:</strong> " + correo + "</p>");
-    $("#pedido-resumen").append("<p><strong>Dirección:</strong> " + direccion + "</p>");
-    $("#pedido-resumen").append("<p><strong>Producto:</strong> " + producto + "</p>");
-    $("#pedido-resumen").append("<p><strong>Cantidad:</strong> " + cantidad + "</p>");
-
-    // Enviar formulario
-
-    $.ajax({
-      url: "https://jsonplaceholder.typicode.com/posts",
-      method: "GET",
-      success: function (data) {
-        console.log(data);
-        $("#resultados").html("");
-        for (var i = 0; i < data.length; i++) {
-          var post = data[i];
-          var html = "<div>";
-          html += "<h3>" + post.title + "</h3>";
-          html += "<p>" + post.body + "</p>";
-          html += "</div>";
-          $("#resultados").append(html);
-        }
-      },
-      error: function () {
-        alert("Error al consumir la API");
-      }
-    });
+    // Simulación de envío del formulario
+    alert('Formulario enviado correctamente');
 
     $('a[href^="#"]').on('click', function (event) {
       var target = $(this.getAttribute('href'));
@@ -101,4 +77,15 @@ $(document).ready(function () {
       }
     });
   });
-})
+
+  $("#next-btn").click(function () {
+    mostrarResumen();
+    setProgressBar(++currentStep);
+
+    $("#step-3").hide();
+
+    $("#btn-finalizar").click(function () {
+      alert('Proceso finalizado correctamente');
+    });
+  });
+});

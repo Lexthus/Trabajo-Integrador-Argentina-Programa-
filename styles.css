@@ -13,7 +13,7 @@
 /* Estilos para titulos*/
 
 h2 {
-  Tamaño de fuente: 2.em;
+  Tamaño de fuente: 2em;
   alineación de texto: centro;
 }
 
@@ -25,7 +25,7 @@ h3 {
 
 p {
   color: negro;
-  Tamaño de fuente: 1.2 em;
+  Tamaño de fuente: 1.2em;
   alineación de texto: centro;
 }
 
@@ -36,7 +36,7 @@ cuerpo {
   margen: 0;
   relleno: 0;
   Ancho: 100%;
-  Altura mínima: 100 VH;
+  Altura mínima: 100VH;
   background-color: var(--blanco);
 }
 
@@ -47,12 +47,12 @@ encabezado {
   posición: fija;
   Color: Var(--blanco);
   Pantalla: cuadrícula;
-  grid-template-columns: 1 fr auto;
+  grid-template-columns: 1fr auto;
   align-items: centro;
   justificar-contenido: espacio-entre;
-  relleno: 10 px 20 px;
+  relleno: 15px;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.www.http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1002%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='url(%23SvgjsLinearGradient1003)'%3e%3c/rect%3e%3cpath d= 'M1440 0L764.1 0L1440 155.98z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M764.1 0L1440 155.98L1440 348.54999999999995L736..78 0z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M736.78 0L1440 348.54999999999995L1440 382.78L718.17 0z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M718.17 0L1440 382.78L1440 451.15999999999997L614.18 0z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/ path%3e%3cpath d='M0 560L695.15 560L0 300.06z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M0 300.06L695.15 560L728.0699999999999 560L0 194.94z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M0 194.94L728.0699999999999 560L920.5999999999999 560L0 147.05z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M0 147.05L920.5999999999999 560L1254.27 560L0 97.28z' fill='rgba(0%2c 0%2c 0% 2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1002'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='15..28%25' y1='-39.29%25' x2='84.72%25' y2='139.29%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1003'%3e%3cstop stop-color='%230e2a47' offset='0'%3e%3c/stop%3e%3cstop stop-color='%2300459e' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
-  tmaño de fondo: cubierta;
+  tamaño de fondo: cubierta;
 }
 
 Encabezado H1 {
@@ -63,28 +63,25 @@ Encabezado H1 {
 /* Estilos para la barra de navegación */
 
 Nav {
-  relleno: 0 px 20 px;
+  relleno: 0 px 20px;
 }
 
 . lista-nav {
-  estilo de lista: ninguno;
   Pantalla: Flex;
 }
 
-. lista-nav li {
-  margen: 0 px 10px;
-}
-
-. lista-nav li a {
+. lista-nav a {
   Color: #FFF;
   decoración de texto: ninguno;
-  Tamaño de fuente: 1.2em;
+  Tamaño de fuente: 1em;
+  relleno: 5px;
 }
 
 /* Estilos para secciones */
- sección: {
-    Acolchado: 20px;
- }
+
+sección {
+  relleno: 20px;
+}
 
 /* Estilos para presentacion */
 
@@ -92,7 +89,7 @@ Nav {
   relleno: 90px;
   Pantalla: cuadrícula;
   grid-template-columns: 1 fr 1 fr;
-  grid-template-rows: 1 fr 1 fr 1  fr;
+  grid-template-rows: 7.5 em 10.5 em 10.5  em;
   justificar-contenido: espacio-alrededor;
   align-items: centro;
   justificar-ítems: centro;
@@ -122,30 +119,19 @@ Nav {
 . presentacion-personal-nombres {
   Pantalla: cuadrícula;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  estilo de lista: ninguno;
   alineación de texto: centro;
-  Espacio: 10px;
-  margen: 20 px 0px;
-}
-
-. presentacion-personal-nombres li {
-  background-color: var(--eastern-blue-oscuro);
-  Relleno: 15px;
-  Radio de borde: 10px;
-}
-
-. presentacion-personal-nombres li a {
-  Color: Var(--blanco);
-  decoración de texto: ninguno;
-  Tamaño de fuente: 1em;
-  font-weight: negrita;
+  Espacio: 30px;
+  margen: 0 px 50px;
 }
 
 . tarjeta {
-  Margen: 20px;
+  margen: 20 px 0px;
+  relleno: 15px;
   Tamaño de fuente: 1em;
-  alineación de texto: heredar;
   Color: Var(--blanco);
+  background-color: var(--eastern-blue-oscuro);
+  font-weight: negrita;
+  Radio de borde: 10px;
 }
 
 . texto-presentacion {
@@ -158,7 +144,7 @@ Nav {
 #form-contacto {
   Pantalla: cuadrícula;
   justificar-ítems: centro;
-  Margen: 50 px 0px;
+  margen: 50 px 0px;
 }
 
 #form-proceso {
@@ -176,10 +162,12 @@ Etiqueta de formulario  {
 
 form input[type="text"],
 entrada de formulario[type="email"],
+form input[type="tel"],
+form input[type="number"],
 selección de formulario,
 Área de texto del formulario {
   Ancho: 60%;
-  Acolchado: 10px;
+  relleno: 10px;
   Radio de borde: 5px;
   Borde: 1px sólido #CCC;
   Margen inferior: 20px;
@@ -196,7 +184,7 @@ selección de formulario,
 
 botón de formulario[type="enviar"],
 botón de formulario[type="button"] {
-  Ancho: 20%;
+  Ancho: 25%;
   relleno: 10 px 20px;
   borde: ninguno;
   Radio de borde: 5px;
@@ -221,8 +209,9 @@ Botón de formulario. Prev {
   Pantalla: ninguna;
 }
 
-. anterior-btn {
-  Pantalla: ninguna;
+. anterior-btn, . Next-BTN {
+  Pantalla: bloque en línea;
+  Margen derecho: 10px;
 }
 
 conjunto de campos {
@@ -251,156 +240,11 @@ pie de página {
   Color: #FFF;
   alineación de texto: centro;
   Margin-top: 30px;
-  Acolchado: 10px;
+  relleno: 10px;
 }
 
 . texto-footer {
   Color: #FFF;
 }
 
-
-
-
-/* Estilos para pantallas chicas */
-
-@media (ancho máximo: 1023px) {
-  NAV UL {
-    Pantalla: cuadrícula;
-    espacio de cuadrícula: 10px;
-  }
-
-  h1 {
-    Tamaño de fuente: 1.2em;
-  }
-
- . presentacion-personal-nombres {
-    grid-template-columns: 1 fr 1 fr;
-    Espacio: 0px;
-  }
-}
-
-@media (ancho máximo: 767px) {
-  h1 {
-    Tamaño de fuente: 1em;
-    Acolchado: 10px;
-  }
-
- . lista-nav {
-    Pantalla: cuadrícula;
-    Espacio: 5px;
-  }
-
-  Nav ul li {
-    Margen derecho: 10px;
-    Tamaño de fuente: 1em;
-    Acolchado: 5px;
-  }
-
-  botón de formulario[type="enviar"],
-  botón de formulario[type="button"] {
-    ancho: automático;
-  }
-
-  fieldset:not(:first-of-type) {
-    display: none;
-  }
-
-  .presentacion-personal-nombres {
-    grid-template-columns: 1fr;
-  }
   
-}
-
-
-
-/* Estilos para pantallas más chicas */
-
-@media (max-width: 479px) {
-
-  /* Estilos para el cuerpo del documento */
-
-  body {
-    font-size: 0.8em;
-  }
-
-  /* Estilos para encabezado */
-
-  header h1 {
-    font-size: 1.8em;
-  }
-
-  /* Estilos para la barra de navegación */
-
-  nav {
-    padding: 0px 10px;
-  }
-
-  .lista-nav li {
-    margin: 2px 5px;
-  }
-
-  /* Estilos para secciones */
-
-  section {
-    padding: 10px;
-  }
-
-  /* Estilos para presentacion */
-
-  #presentacion {
-    padding-top: 130px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-  }
-
-  .presentacion__titulo {
-    grid-column-start: 1;
-    grid-column-end: 1;
-  }
-
-  .presentacion__texto-1,
-  .presentacion__texto-2 {
-    width: 90%;
-    margin: 20px 0px;
-  }
-
-  .presentacion__texto-2 {
-    grid-row-start: 3;
-    grid-row-end: 4;
-    grid-column-start: 1;
-  }
-
-  .presentacion-personal-nombres {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  /* Estilos para formulario */
-
-  #form-contacto {
-    padding: 20px;
-  }
-
-  form input[type="text"],
-  form input[type="email"],
-  form select,
-  form textarea {
-    width: 90%;
-    Tamaño de fuente: 1em;
-  }
-
-  botón de formulario[type="enviar"],
-  botón de formulario[type="button"] {
-    Ancho: 40%;
-    Tamaño de fuente: 1em;
-  }
-
-  /* Estilos para pie de página */
-
-  pie de página {
-    Margin-top: 20px;
-  }
-
- . texto-footer {
-    Tamaño de fuente: 0.9em;
-  }
-}

@@ -8,8 +8,8 @@ $(documento). Ready(función () {
   Ocultar todos los fieldsets menos el primero
   $("fieldset"). not(":first"). esconder();
 
-  Botones de retroceso en los pasos 2 y 3
-  $(".next"). click(función () {
+  Botones de retroceso y siguiente en los pasos 2 y 3
+  $(".next-btn"). click(función () {
     var $activeFieldset = $(this). closest("fieldset");
     $activeFieldset. esconder();
     $activeFieldset. siguiente(). mostrar();
@@ -22,7 +22,7 @@ $(documento). Ready(función () {
     }
   });
 
-  $(".prev"). click(función () {
+  $(".prev-btn"). click(función () {
     var $activeFieldset = $(this). closest("fieldset");
     $activeFieldset. esconder();
     $activeFieldset. anterior(). mostrar();
@@ -42,54 +42,30 @@ $(documento). Ready(función () {
     var percent = parseFloat(100 / totalSteps) * currentStep;
      porcentaje = porcentaje. toFijo();
     $(".progress-bar"). css("width", porcentaje + "%");
+    if (currentStep == 3) {
+      $("#step-3"). addClass("oculto");
+    }
+  } 
+
+  Función para mostrar el resumen
+  function mostrarResumen() {
+    VAR Resumen = "";
+    resumen += "<p>Nombre: " + $("#nombre"). val() + "</p>";
+    resumen += "<p>Email: " + $("#email"). val() + "</p>";
+    resumen += "<p>Teléfono: " + $("#telefono"). val() + "</p>";
+    resumen += "<p>Comentarios: " + $("#comentarios"). val() + "</p>";
+    $("#pedido-resumen"). html(resumen);
+    $("#resumen"). mostrar();
+    
+    Ocultar el botón de "Siguiente" en el último paso
+    $("#next-btn"). esconder();
   }
 
   $("#form-proceso"). submit(function (evento) {
     evento. preventDefault();
 
-    Obtener los datos del formulario
-
-    var nombre = $("input[name='nombre']").  Val();
-    var correo = $("input[name='correo']").  Val();
-    var direccion = $("input[name='direccion']").  Val();
-    var producto = $("input[name='producto']:checked").  Val();
-    var cantidad = $("input[name=''cantidad]:checked" )
-      . map(función () {
-        return $(this). Val();
-      })
-      . Obtener();
-    var instructions = $("textarea[name='instructions']").  Val();
-
-    Mostrar resumen del pedido
-
-    $("#pedido-resumen"). html("<h2>Resumen de tu pedido</h2>");
-    $("#pedido-resumen"). append("<p><strong>Nombre:</strong> " + nombre + "</p>");
-    $("#pedido-resumen"). append("<p><strong>Correo:</strong> " + correo + "</p>");
-    $("#pedido-resumen"). append("<p><strong>Dirección:</strong> " + direccion + "</p>");
-    $("#pedido-resumen"). append("<p><strong>Producto:</strong> " + producto + "</p>");
-    $("#pedido-resumen"). append("<p><strong>Cantidad:</strong> " + cantidad  + "</p>" );
-
-    Enviar formulario
-
-    $. Ajax({
-      url: "https://jsonplaceholder.typicode.com/posts",
-      método: "GET",
-      Éxito: función (datos) {
-        consola. log(datos);
-        $("#resultados"). .html("");
-        para (var i = 0;  <  datos. longitud;  Yo++) {
-          var post = datos[i];
-          var html = "<div>";
-          html += "<h3>" + post. Título + "</h3>";
-          html += "<p>" + post. cuerpo + "</p>";
-          html += "</div>";
-          $("#resultados"). anexar(html);
-        }
-      },
-      Error: función () {
-        alert("Error al consumir la API");
-      }
-    });
+    Simulación de envío del formulario
+    alert('Formulario enviado correctamente');
 
     $('a[href^="#"]'). on('click', function (event) {
       var target = $(esto. getAttribute('href'));
@@ -101,4 +77,15 @@ $(documento). Ready(función () {
       }
     });
   });
-})
+
+  $("#next-btn"). click(función () {
+    mostrarResumen();
+    setProgressBar(++currentStep);
+
+    $("#step-3"). esconder();
+
+    $("#btn-finalizar"). click(función () {
+      alert('Proceso finalizado correctamente');
+    });
+  });
+});

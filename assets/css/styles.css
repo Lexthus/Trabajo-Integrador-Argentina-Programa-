@@ -85,7 +85,7 @@ section {
 
 /* Estilos para presentacion */
 
-#presentacion {
+#inicio {
   padding-top: 90px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -95,22 +95,22 @@ section {
   justify-items: center;
 }
 
-.presentacion__titulo {
+.inicio__titulo {
   grid-column-start: 1;
   grid-column-end: 3;
   font-size: 2.5em;
   text-align: center;
 }
 
-.presentacion__texto-1,
-.presentacion__texto-2 {
+.inicio__texto-1,
+.inicio__texto-2 {
   width: 80%;
   margin: 40px 0px;
   font-size: 1.4em;
   text-align: inherit;
 }
 
-.presentacion__texto-2 {
+.inicio__texto-2 {
   grid-row-start: 3;
   grid-row-end: 4;
   grid-column-start: 2;
@@ -273,6 +273,6 @@ footer {
   padding: 10px;
 }
 
-.texto-footer {
+footer p {
   color: #fff;
 }

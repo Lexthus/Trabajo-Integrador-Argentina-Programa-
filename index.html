@@ -3,28 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Equipo 6 - AP 4.0</title>
-    <link rel="shortcut icon" href="ar-prog_logo.png" />
+    <title>Ventas de Motos</title>
+    <link rel="shortcut icon" href="favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="media.css" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/media.css" />
   </head>
-
   <body>
     <header>
-      <h1>Trabajo integrador - Argentina Programa 4.0</h1>
-      <nav>
-        <div class="lista-nav">
-          <a href="#presentacion">Inicio</a>
-          <a href="#presentacion-personal">Nosotros</a>
-          <a href="#contacto">Contacto</a>
-          <a href="#proceso">Proceso</a>
-        </div>
+      <h1>Ventas de Motos</h1>
+      <nav class="lista-nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#motos">Motos</a>
+        <a href="#contacto">Contacto</a>
       </nav>
     </header>
 
@@ -32,108 +28,111 @@
       <section id="presentacion">
         <h2 class="presentacion__titulo">¡Bienvenidos a nuestra página web!</h2>
         <p class="presentacion__texto-1">
-          Somos un grupo de estudiantes apasionados por el desarrollo web y
-          queremos compartir nuestros conocimientos y proyectos contigo.
+          Somos una tienda especializada en la venta de motos nuevas y queremos
+          ayudarte a encontrar la moto de tus sueños.
         </p>
         <p class="presentacion__texto-2">
-          En esta página encontrarás información sobre quiénes somos, nuestros
-          servicios y proyectos, así como también podrás contactarnos para
+          En nuestra página encontrarás información sobre las marcas y modelos
+          de motos que ofrecemos, así como también podrás contactarnos para
           cualquier duda o consulta.
         </p>
       </section>
 
+      <section id="inicio">
+        <h2>Encuentra la moto de tus sueños</h2>
+        <p>Explora nuestra selección de motocicletas y encuentra la tuya.</p>
+      </section>
+
+      <section id="motos">
+        <div class="grid-motos">
+          <div class="tarjeta-moto">
+            <h3>Zanella Styler Exclusive 150</h3>
+            <img src="/assets/img/moto1.jpg" alt="Moto 1" />
+            <p>Precio: $620.000</p>
+            <button>Comprar</button>
+          </div>
+
+          <div class="tarjeta-moto">
+            <h3>Yamaha Nmx Connected 155</h3>
+            <img src="/assets/img/moto2.jpg" alt="Moto 2" />
+            <p>Precio: $2.500.000</p>
+            <button>Comprar</button>
+          </div>
+
+          <div class="tarjeta-moto">
+            <h3>Scooter Yamaha Ray Zr 125 Cc.</h3>
+            <img src="/assets/img/moto3.jpg" alt="Moto 3" />
+            <p>Precio: $1.017.700</p>
+            <button>Comprar</button>
+          </div>
+        </div>
+      </section>
+
       <section id="presentacion-personal">
-        <h2>Presentación Personal</h2>
+        <h2>Conoce al equipo de nuestra empresa de venta de motos</h2>
         <p>
-          Somos el equipo 6 en el curso de desarrollo web de Argentina Programa
-          4.0 y queremos presentarnos individualmente.
+          En nuestra empresa, nos dedicamos a la venta de motos nuevas y estamos
+          comprometidos en brindarte el mejor servicio. Conoce a nuestro equipo:
         </p>
         <div class="presentacion-personal-nombres">
           <div class="tarjeta">
             <h3>Alex Pereyra</h3>
             <p class="texto-presentacion">
-              Soy un estudiante apasionado por el desarrollo web. Me encanta
-              aprender nuevas tecnologías y estoy emocionado por compartir mi
-              experiencia en este campo.
+              Como jefe de ventas, mi principal tarea es asegurarme de que
+              nuestros clientes encuentren la moto adecuada que se ajuste a sus
+              necesidades y presupuesto.
             </p>
           </div>
           <div class="tarjeta">
             <h3>Gimena Canadell</h3>
             <p class="texto-presentacion">
-              Estoy estudiando desarrollo web y dando mis primeros pasos en este
-              camino, pero estoy entusiasmada por aprender y crecer en esta área.
+              Como especialista en marketing, mi trabajo es hacer que nuestra
+              empresa sea más visible y atractiva para el público. Me encargo de
+              crear campañas publicitarias efectivas y estrategias de marketing
+              que ayuden a atraer a más clientes interesados en nuestras motos
+              nuevas.
+            </p>
+          </div>
+          <div class="tarjeta">
+            <h3>Javier Soriano</h3>
+            <p class="texto-presentacion">
+              Como encargado de mantenimiento, mi tarea es asegurarme de que
+              todas las motos estén en perfectas condiciones antes de su venta.
+              Me apasiona el mundo de las motos y siempre estoy buscando nuevas
+              formas de mejorar la calidad y el rendimiento de nuestras motos
+              nuevas.
             </p>
           </div>
           <div class="tarjeta">
             <h3>Leonardo Martin</h3>
             <p class="texto-presentacion">
-              Soy un programador autodidacta y siempre estoy buscando nuevos
-              desafíos y oportunidades para aprender y mejorar mis habilidades.
+              Como diseñador gráfico, mi trabajo es hacer que nuestro sitio web
+              sea más atractivo y fácil de usar para los visitantes. Me encargo
+              de crear diseños visuales atractivos y de mejorar la experiencia
+              del usuario en nuestro sitio web para que sea más fácil encontrar
+              la moto adecuada y hacer una compra satisfactoria.
             </p>
           </div>
-          <div class="tarjeta">
-            <h3>Javier Soriano</h3>
-          <p class="texto-presentacion">
-            Me apasiona el diseño web y estoy emocionado por compartir mis
-            habilidades y conocimientos con los demás miembros del equipo.
-          </p>
         </div>
-      </div>
-      <br/>
-      <p>
-        Estamos orgullosos de presentarles nuestra creación, un formulario que
-        hemos diseñado para hacer que su experiencia de solicitud en línea sea
-        lo más fácil y fluida posible. En lugar de simplemente venderle un
-        servicio, hemos invertido tiempo y esfuerzo en crear una herramienta que
-        realmente lo ayude a obtener lo que necesita de manera efectiva.
-      </p>
-      <br/>
-      <p>
-        Permítanos mostrarle lo que hemos creado y cómo puede ayudarlo a
-        alcanzar sus objetivos en línea:
-      </p>
-    </section>
+        <br />
+        <p>
+          Estamos orgullosos de presentarles nuestra página de venta de motos
+          nuevas, diseñada para hacer que su experiencia de compra en línea sea
+          lo más fácil y fluida posible. En lugar de simplemente venderle una
+          moto, hemos invertido tiempo y esfuerzo en crear una plataforma que
+          realmente lo ayude a obtener la moto que necesita de manera efectiva y
+          satisfactoria.
+        </p>
+        <br />
+        <p>
+          Permítanos mostrarte lo que hemos creado y cómo puede ayudarte a
+          encontrar la moto de tus sueños:
+        </p>
+      </section>
 
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <form id="form-contacto" method="GET" action="">
-        <label for="nombre">Nombre:</label>
-        <input
-          type="text"
-          id="nombre"
-          name="nombre"
-          placeholder="Nombre"
-          required
-        />
-
-        <label for="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Email"
-          required
-        />
-
-        <label for="mensaje">Mensaje:</label>
-        <textarea
-          class="mensaje"
-          id="mensaje"
-          name="mensaje"
-          placeholder="Escribe tu mensaje aquí"
-          required
-        ></textarea>
-
-        <button type="submit" id="enviar">Enviar</button>
-      </form>
-    </section>
-
-    <section id="proceso">
-      <h2>Proceso</h2>
-      <form id="form-proceso" method="GET" action="">
-
-        <fieldset class="hidden">
-          <legend>Paso 1: Información Personal</legend>
+      <section id="contacto">
+        <h2>Contacto</h2>
+        <form id="form-contacto" method="POST" action="">
           <label for="nombre">Nombre:</label>
           <input
             type="text"
@@ -142,6 +141,7 @@
             placeholder="Nombre"
             required
           />
+
           <label for="email">Email:</label>
           <input
             type="email"
@@ -150,72 +150,129 @@
             placeholder="Email"
             required
           />
+
           <label for="telefono">Teléfono:</label>
           <input
             type="tel"
             id="telefono"
             name="telefono"
             placeholder="Teléfono"
-            required
           />
-          <button type="button" class="next-btn" id="btn-siguiente">
-            Siguiente
-          </button>
-          <button type="button" class="btn btn-secondary prev">Prev</button>
-        </fieldset>
 
-        <fieldset class="hidden">
-          <legend>Paso 2: Datos de envío</legend>
-          <label for="producto">Producto:</label>
-          <select id="producto" name="producto" required>
-            <option value="">Selecciona un producto</option>
-            <option value="producto1">Producto 1</option>
-            <option value="producto2">Producto 2</option>
-            <option value="producto3">Producto 3</option>
-          </select>
-          <label for="cantidad">Cantidad:</label>
-          <input
-            type="number"
-            id="cantidad"
-            name="cantidad"
-            placeholder="Cantidad"
-            required
-          />
-          <button type="button" class="prev-btn">Anterior</button>
-          <button type="button" class="next-btn">Siguiente</button>
-        </fieldset>
-
-        <fieldset class="hidden">
-          <legend>Paso 3</legend>
-          <label for="comentarios">Comentarios:</label>
+          <label for="mensaje">Mensaje:</label>
           <textarea
-            id="comentarios"
-            name="comentarios"
-            placeholder="Agrega tus comentarios"
+            class="mensaje"
+            id="mensaje"
+            name="mensaje"
+            placeholder="Escribe tu mensaje aquí"
+            required
           ></textarea>
-          <button type="button" class="prev-btn">Anterior</button>
-          <button type="button" id="next-btn">Siguiente</button>
-        </fieldset>
 
-        <fieldset id="resumen" style="display: none;">
-          <h2>Resumen</h2>
-          <p>Por favor, revisa que toda la información sea correcta:</p>
-          <div id="pedido-resumen"></div>
-          <button type="button" class="prev-btn">Anterior</button>
-          <button type="button" id="btn-finalizar">Finalizar</button>
-        </fieldset>        
-        
-      </form>
-    </section>
+          <button type="submit" id="enviar">Enviar</button>
+        </form>
+        <div class="contacto-informacion">
+          <p>
+            Para cualquier consulta, por favor complete el formulario anterior o
+            contáctenos directamente a través de los siguientes medios:
+          </p>
+          <ul>
+            <li>Teléfono: +54 9 11 1234-5678</li>
+            <li>Email: info@ventademotos.com</li>
+            <li>
+              Dirección: Av. Libertador 1234, Ciudad Autónoma de Buenos Aires
+            </li>
+          </ul>
+        </div>
+      </section>
 
-    <footer>
-      <p class="texto-footer">
-        Derechos Reservados: Equipo 6 - Argentina Programa 4.0 &copy; 2023
-      </p>
-    </footer>
+      <section id="proceso">
+        <h2>Proceso</h2>
+        <form id="form-proceso" method="GET" action="">
+          <fieldset class="hidden">
+            <legend>Paso 1: Información Personal</legend>
+            <label for="nombre">Nombre:</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Nombre"
+              required
+            />
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+            <label for="telefono">Teléfono:</label>
+            <input
+              type="tel"
+              id="telefono"
+              name="telefono"
+              placeholder="Teléfono"
+              required
+            />
+            <button type="button" class="next-btn" id="btn-siguiente">
+              Siguiente
+            </button>
+            <button type="button" class="btn btn-secondary prev">Prev</button>
+          </fieldset>
+      
+          <fieldset class="hidden">
+            <legend>Paso 2: Datos de envío</legend>
+            <label for="producto">Producto:</label>
+            <select id="producto" name="producto" required>
+              <option value="">Selecciona una moto</option>
+              <option value="modelo1">Moto modelo 1</option>
+              <option value="modelo2">Moto modelo 2</option>
+              <option value="modelo3">Moto modelo 3</option>
+            </select>
+            <label for="color">Color:</label>
+            <select id="color" name="color" required>
+              <option value="">Selecciona un color</option>
+              <option value="rojo">Rojo</option>
+              <option value="azul">Azul</option>
+              <option value="verde">Verde</option>
+            </select>
+            <button type="button" class="prev-btn">Anterior</button>
+            <button type="button" class="next-btn">Siguiente</button>
+          </fieldset>
+      
+          <fieldset class="hidden">
+            <legend>Paso 3</legend>
+            <label for="comentarios">Comentarios:</label>
+            <textarea
+              id="comentarios"
+              name="comentarios"
+              placeholder="Agrega tus comentarios"
+            ></textarea>
+            <button type="button" class="prev-btn">Anterior</button>
+            <button type="button" id="next-btn">Siguiente</button>
+          </fieldset>
+      
+          <fieldset id="resumen" style="display: none;">
+            <h2>Resumen</h2>
+            <p>Por favor, revisa que toda la información sea correcta:</p>
+            <div id="pedido-resumen"></div>
+            <button type="button" class="prev-btn">Anterior</button>
+            <button type="button" id="btn-finalizar">Finalizar</button>
+          </fieldset>        
+              
+        </form>
+      </section>      
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
-    <script src="app.js"></script>
+      <footer>
+        <p>
+          Derechos de autor © 2023 Ventas de Motos. Todos los derechos
+          reservados.
+        </p>
+      </footer>
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+      <script src="app.js"></script>
+    </main>
   </body>
 </html>

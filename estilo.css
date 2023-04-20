@@ -1,0 +1,143 @@
+/* Estilos para pantallas chicas */
+
+@media (ancho máximo: 1023px) {
+    NAV UL {
+      Pantalla: cuadrícula;
+      espacio de cuadrícula: 10px;
+    }
+  
+    h1 {
+      Tamaño de fuente: 1.2em;
+    }
+  
+ . presentacion-personal-nombres {
+      grid-template-columns: 1 fr 1 fr;
+      Espacio: 0px;
+    }
+  }
+  
+  @media (ancho máximo: 767px) {
+    h1 {
+      Tamaño de fuente: 1em;
+      relleno: 10px;
+    }
+  
+ . lista-nav {
+      Pantalla: cuadrícula;
+      Espacio: 5px;
+    }
+  
+    Nav ul li {
+      Margen derecho: 10px;
+      Tamaño de fuente: 1em;
+      relleno: 5px;
+    }
+  
+    botón de formulario[type="enviar"],
+    botón de formulario[type="button"] {
+      ancho: automático;
+    }
+  
+    fieldset:not(:first-of-type) {
+      Pantalla: Ninguna;
+    }
+  
+ . presentacion-personal-nombres {
+      grid-template-columns: 1fr;
+    }
+    
+  }
+  
+  
+  
+  /* Estilos para pantallas más chicas */
+  
+  @media (ancho máximo: 479px) {
+  
+    /* Estilos para el cuerpo del documento */
+  
+    cuerpo {
+      Tamaño de fuente: 0.8em;
+    }
+  
+    /* Estilos para encabezado */
+  
+    Encabezado H1 {
+      Tamaño de fuente: 1.8em;
+    }
+  
+    /* Estilos para la barra de navegación */
+  
+    Nav {
+      relleno: 0 px 10px;
+    }
+  
+ . lista-nav li {
+      margen: 2 px 5px;
+    }
+  
+    /* Estilos para secciones */
+  
+    section {
+      padding: 10px;
+    }
+  
+    /* Estilos para presentacion */
+  
+    #presentacion {
+      padding-top: 130px;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+  
+    .presentacion__titulo {
+      grid-column-start: 1;
+      grid-column-end: 1;
+    }
+  
+    .presentacion__texto-1,
+    .presentacion__texto-2 {
+      width: 90%;
+      margin: 20px 0px;
+    }
+  
+    .presentacion__texto-2 {
+      grid-row-start: 3;
+      grid-row-end: 4;
+      grid-column-start: 1;
+    }
+  
+    .presentacion-personal-nombres {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    /* Estilos para formulario */
+  
+    #form-contacto {
+      padding: 20px;
+    }
+  
+    form input[type="text"],
+    form input[type="email"],
+    form select,
+    form textarea {
+      width: 90%;
+      Tamaño de fuente: 1em;
+    }
+  
+    botón de formulario[type="enviar"],
+    botón de formulario[type="button"] {
+      Ancho: 40%;
+      Tamaño de fuente: 1em;
+    }
+  
+    /* Estilos para pie de página */
+  
+    pie de página {
+      Margin-top: 20px;
+    }
+  
+ . texto-footer {
+      Tamaño de fuente: 0.9em;
+    }
+  }

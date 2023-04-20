@@ -81,13 +81,13 @@ nav {
 /* Estilos para secciones */
 
 section {
-  padding: 20px;
+  padding: 40px;
 }
 
 /* Estilos para presentacion */
 
 #inicio {
-  padding-top: 90px;
+  padding-top: 100px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 7.5em 10.5em 10.5em;
